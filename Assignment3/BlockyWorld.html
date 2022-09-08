@@ -1,0 +1,67 @@
+<!-- asg3.html by Martin Bojinov, mbojinov@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang=”en”>
+
+
+<head>
+  <meta charset="utf-8" />
+  <title>Asg3: Blocky World by Martin Bojinov</title>
+</head>
+
+
+<body onload="main()">
+
+  <canvas id="webgl" width="600" height="600">
+    Please use the browser supporting "canvas"
+  </canvas>
+
+  <!-- import scripts -->
+  <script src="lib/webgl-utils.js"></script>  <!-- libraries -->
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="point.js"></script>            <!-- shape classes -->
+  <script src="triangle.js"></script>
+  <script src="circle.js"></script>
+  <script src="cube.js"></script>
+  <script src="penguin.js"></script>          <!-- penguin file -->
+  <script src="set.js"></script>              <!-- world file -->
+  <script src="camera.js"></script>           <!-- camera file -->
+  <script src="BlockyWorld.js"></script>      <!-- main javascript file -->
+
+  <!-- Arm and Hand Animation On / Off Buttons -->
+  <br><br>
+  <label>Shrug Animation Toggle:</label>
+  <br>
+  <input type="button" value="ON" id="handanimon"></input>
+  <input type="button" value="OFF" id="handanimoff"></input>
+
+  <!-- One Time Animations Button -->
+  <br><br>
+  <label>Mini Animations:</label>
+  <br>
+  <audio id="audio"
+    src="quack_5.mp3">
+  </audio>
+  <input type="button" value="QUACK" id="quack"></input>
+  <input type="button" value="WAVE" id="wave"></input>
+
+  <!-- Camera Angle Slider Input -->
+  <br><br>
+  <label for="camera">Camera Angle:</label>
+  <input type="range" id="camangle" name="camangle" required
+      min="-180" max="180" value="0" step="5"></input>
+
+  <!-- Instructions -->
+  <br><br>
+  <label>Instructions:</label>
+  <p>- Camera can be controlled using WASD keys. RF keys can be used to go Up and Down.</p>
+  <p>- Camera can rotated using EQ keys.</p>
+
+
+
+</body>
+
+
+</html>

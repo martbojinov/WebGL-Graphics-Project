@@ -1,0 +1,87 @@
+<!-- asg1.html by Martin Bojinov, mbojinov@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang=”en”>
+
+
+<head>
+  <meta charset="utf-8" />
+  <title>Asg2: Blocky Animal by Martin Bojinov</title>
+</head>
+
+
+<body onload="main()">
+
+  <canvas id="webgl" width="500" height="500">
+    Please use the browser supporting "canvas"
+  </canvas>
+
+  <!-- import scripts -->
+  <script src="lib/webgl-utils.js"></script>  <!-- libraries -->
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix.js"></script>
+
+  <script src="point.js"></script>            <!-- shape classes -->
+  <script src="triangle.js"></script>
+  <script src="circle.js"></script>
+  <script src="cube.js"></script>
+
+  <script src="BlockyAnimal.js"></script>     <!-- main javascript file -->
+
+  <!-- Arm and Hand Animation On / Off Buttons -->
+  <br><br>
+  <label>Shrug Animation Toggle:</label>
+  <br>
+  <input type="button" value="ON" id="handanimon"></input>
+  <input type="button" value="OFF" id="handanimoff"></input>
+
+  <!-- One Time Animations Button -->
+  <br><br>
+  <label>Mini Animations:</label>
+  <br>
+  <audio id="audio"
+    src="quack_5.mp3">
+  </audio>
+  <input type="button" value="QUACK" id="quack"></input>
+  <input type="button" value="WAVE" id="wave"></input>
+
+  <!-- Camera Angle Slider Input -->
+  <br><br>
+  <label for="camera">Camera Angle:</label>
+  <input type="range" id="camangle" name="camangle" required
+      min="-180" max="180" value="0" step="5"></input>
+
+  <!-- Left Arm Slider Input -->
+  <br><br>
+  <label>Arms:</label>
+  <br>
+  <label for="larm">Left Arm:</label>
+  <input type="range" id="leftarm" name="leftarm" required
+      min="-45" max="60" value="0" step="1"></input>
+  <label for="rarm">Right Arm:</label>
+  <input type="range" id="rightarm" name="rightarm" required
+      min="-45" max="60" value="0" step="1"></input>
+
+  <!-- Hands Sliders Input -->
+  <br><br>
+  <label>Hands:</label>
+  <br>
+  <label for="lhand">Left Hand:</label>
+  <input type="range" id="lefthand" name="lefthand" required
+      min="-45" max="45" value="0" step="1"></input>
+  <label for="rhand">Right Hand:</label>
+  <input type="range" id="righthand" name="righthand" required
+      min="-45" max="45" value="0" step="1"></input>
+
+  <!-- Mouth Slider Input -->
+  <br><br>
+  <label for="mouth">Mouth:</label>
+  <input type="range" id="mouth" name="mouth" required
+      min="0" max="15" value="0" step="1"></input>
+
+
+</body>
+
+
+</html>

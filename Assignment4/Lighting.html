@@ -1,0 +1,127 @@
+<!-- asg4.html by Martin Bojinov, mbojinov@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang=”en”>
+
+
+<head>
+  <meta charset="utf-8" />
+  <title>Asg3: Blocky World by Martin Bojinov</title>
+</head>
+
+<style>
+table, th, td {
+  border:1px solid black;
+  border-radius: 10px;
+}
+</style>
+
+<body onload="main()">
+
+  <center>
+
+  <canvas id="webgl" width="600" height="600">
+    Please use the browser supporting "canvas"
+  </canvas>
+
+  <!-- import scripts -->
+  <script src="lib/webgl-utils.js"></script>  <!-- libraries -->
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="point.js"></script>            <!-- shape classes -->
+  <script src="triangle.js"></script>
+  <script src="circle.js"></script>
+  <script src="cube.js"></script>
+  <script src="sphere.js"></script>
+  <script src="penguin.js"></script>          <!-- penguin file -->
+  <script src="set.js"></script>              <!-- world file -->
+  <script src="camera.js"></script>           <!-- camera file -->
+  <script src="Lighting.js"></script>      <!-- main javascript file -->
+
+  <br><br>
+  <table style="width:80%">
+    <tr>
+      <th style="width:33%"> Animal Animations </th>
+      <th style="width:33%"> Camera Controls </th>
+      <th style="width:33%"> Lighting </th>
+    </tr>
+    <tr>
+      <td><center>
+
+        <!-- Arm and Hand Animation On / Off Buttons -->
+        <label>Shrug Animation Toggle:</label>
+        <br>
+        <input type="button" value="ON" id="handanimon"></input>
+        <input type="button" value="OFF" id="handanimoff"></input>
+
+        <!-- One Time Animations Button -->
+        <br><br>
+        <label>Mini Animations:</label>
+        <br>
+        <audio id="audio"
+          src="quack_5.mp3">
+        </audio>
+        <input type="button" value="QUACK" id="quack"></input>
+        <input type="button" value="WAVE" id="wave"></input>
+
+      </center></td>
+      <td><center>
+
+        <!-- Camera Angle Slider Input -->
+        <label for="camera">Camera Angle:</label>
+        <input type="range" id="camangle" name="camangle" required
+            min="-180" max="180" value="0" step="5"></input>
+
+      </center></td>
+      <td><center>
+
+        <!-- Lighting Toggle Button -->
+        <label>Lighting Toggle:</label>
+        <input type="button" value="Toggle" id="lighttoggle"></input>
+
+        <!-- Camera Angle Slider Input -->
+        <br><br>
+        <label for="light">Light Position - </label>
+        <input type="button" value="Toggle Light Animation" id="lightanim"></input>
+        <br><label for="light">X:</label>
+        <input type="range" id="lightx" name="lightx" required
+            min="-16" max="16" value="0" step="0.01"></input>
+        <br><label for="lighty">Y:</label>
+        <input type="range" id="lighty" name="lightx" required
+            min="-2" max="10" value="5" step="0.01"></input>
+        <br><label for="lightz">Z:</label>
+        <input type="range" id="lightz" name="lightx" required
+            min="-16" max="16" value="0" step="0.01"></input>
+
+        <!-- Normal Toggle Button -->
+        <br><br>
+        <label>Normal Texture Toggle:</label>
+        <input type="button" value="Toggle" id="normaltoggle"></input>
+
+        <!-- Show Light Indicator Button -->
+        <br><br>
+        <label>Light Indicator Toggle:</label>
+        <input type="button" value="Toggle" id="lightIndicatorToggle"></input>
+
+
+
+      </td>
+    </tr>
+  </table>
+
+
+  <!-- Instructions -->
+  <br><br>
+  <label>Instructions:</label>
+  <p>- Camera can be controlled using WASD keys. RF keys can be used to go Up and Down.</p>
+  <p>- Camera can rotated using EQ keys.</p>
+
+</center>
+
+
+
+</body>
+
+
+</html>

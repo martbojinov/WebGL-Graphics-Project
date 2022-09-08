@@ -1,0 +1,95 @@
+<!-- asg1.html by Martin Bojinov, mbojinov@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang=”en”>
+
+
+<head>
+  <meta charset="utf-8" />
+  <title>Asg1 by Martin Bojinov</title>
+</head>
+
+
+<body onload="main()">
+
+  <canvas id="webgl" width="500" height="500">
+    Please use the browser supporting "canvas"
+  </canvas>
+
+  <!-- import scripts -->
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="point.js"></script>
+  <script src="triangle.js"></script>
+  <script src="circle.js"></script>
+  <script src="asg1.js"></script>
+
+  <!-- Clear Canvas Button -->
+  <br><br>
+  <input type="button" value="Clear Canvas" id="clear"></input>
+
+  <!-- Change Canvas Color Button -->
+  <input type="button" value="Change Canvas Color to RGB" id="ccb"></input>
+
+  <!-- Point Button -->
+  <br><br>
+  <label>Drawing Mode:</label>
+  <br>
+  <input type="button" value="Square" id="square"></input>
+
+  <!-- Triangle Button -->
+  <input type="button" value="Triangle" id="triangle"></input>
+
+  <!-- Circle Button -->
+  <input type="button" value="Circle" id="circle"></input>
+
+  <!-- Color Slider Input -->
+  <br><br>
+  <label>Shape Color:</label>
+  <br>
+  <label for="r">Red:</label>
+  <input type="range" id="r" name="r" required
+     min="0.0" max="1.0" value="1.0" step="0.1"></input>
+
+  <label for="g">Green:</label>
+  <input type="range" id="g" name="g" required
+     min="0.0" max="1.0" value="1.0" step="0.1"></input>
+
+  <label for="b">Blue:</label>
+  <input type="range" id="b" name="b" required
+      min="0.0" max="1.0" value="1.0" step="0.1"></input>
+
+  <!-- Alpha Slider Input -->
+  <br><br>
+  <label for="a">Alpha:</label>
+  <input type="range" id="a" name="a" required
+      min="0.0" max="1.0" value="1.0" step="0.1"></input>
+
+  <!-- Shape Size Slider Input -->
+  <br><br>
+  <label for="size">Shape Size:</label>
+  <input type="range" id="size" name="size" required
+      min="5.0" max="40.0" value="20.0" step="1.0"></input>
+
+  <!-- Number of Segments for Circle Input -->
+  <label for="size">(Circles) Segment Count:</label>
+  <input type="range" id="circleSEG" name="segments" required
+      min="3" max="15" value="10.0" step="1.0"></input>
+
+  <!-- Color Slider Input -->
+  <br><br>
+  <label>Mirror Options:</label>
+  <br>
+  <label for="xaxis">Mirror Over X-Axis:</label>
+  <input type="range" id="xaxis" name="xaxis" required
+     min="0.0" max="1.0" value="0.0" step="1.0"></input>
+
+  <label for="yaxis">Mirror Over Y-Axis:</label>
+  <input type="range" id="yaxis" name="yaxis" required
+     min="0.0" max="1.0" value="0.0" step="1.0"></input>
+
+</body>
+
+
+</html>

@@ -1,0 +1,53 @@
+<!-- asg5.html by Martin Bojinov, mbojinov@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>"Resting Stop" by Martin Bojinov</title>
+    <style>
+    table, th, td {
+      border:1px solid black;
+      border-radius: 10px;
+    }
+    #c {
+        display: block;
+        background: images/skybox.jpg no-repeat center center ;
+        background-size: cover;
+    }
+    </style>
+  </head>
+
+  <body> <!-- onload="main()" for main file -->
+
+    <center>
+    <canvas id="c" width="1200" height="600">
+      Please use the browser supporting "canvas"
+    </canvas>
+
+    <br>
+    <table style="width:40%">
+      <tr>
+        <th style="width:33%"> "Resting Stop" by Martin Bojinov </th>
+      </tr>
+      <tr>
+        <td><center>
+          <!-- Toggle Light Helpers -->
+          <br>
+          <p>- Camera can be controlled using the mouse.</p>
+          <p>- Extras Added: Fog, Billboards, and Render to Texture (see billboard obj in background).</p>
+          <br><br>
+        </center></td>
+      </tr>
+    </table>
+
+
+
+    <!-- Load .js scripts -->
+    <script type="module" src="asg5.js"></script>
+
+  </center>
+  </body>
+
+</html>

@@ -1,0 +1,75 @@
+<!-- asg0.html by Martin Bojinov, mbojinov@ucsc.edu -->
+<!-- File based off DrawTriangle.html (c) 2012 matsuda -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Asg0 by Martin Bojinov</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="cnv1" width="400" height="400">
+      Please use a browser that supports "canvas" element.
+    </canvas>
+
+    <!-- Load .js scripts -->
+    <script src="asg0.js"></script>
+    <script src="lib\cuon-matrix-cse160.js"></script>
+
+    <!-- V1 input boxes -->
+    <br>
+    <label for="v1">v1: x</label>
+    <input type="text" id="v1x" name="v1x" required
+       minlength="1" maxlength="8" size="10"></input>
+
+    <label for="v1">y</label>
+    <input type="text" id="v1y" name="v1y" required
+      minlength="1" maxlength="8" size="10"></input>
+
+    <!-- V2 input boxes -->
+    <br>
+    <label for="v2">v2: x</label>
+    <input type="text" id="v2x" name="v2x" required
+      minlength="1" maxlength="8" size="10"></input>
+
+    <label for="v2">y</label>
+    <input type="text" id="v2y" name="v2y" required
+      minlength="1" maxlength="8" size="10"></input>
+
+    <!-- Draw Button -->
+    <br>
+    <input type="button" value="Draw" onclick="handleDrawEvent()"></input>
+
+
+    <!-- Operation Select Menu -->
+    <br><br>
+    <label for="op-select">Operation:</label>
+
+    <select name="operations" id="op-select">
+        <option value="">--Please choose an option--</option>
+        <option value="add">Add</option>
+        <option value="sub">Sub</option>
+        <option value="mul">Scalar Multiply</option>
+        <option value="div">Scalar Divide</option>
+        <option value="mag">Magnitude</option>
+        <option value="norm">Normalize</option>
+        <option value="dot">Angle Between</option>
+        <option value="cross">Area</option>
+    </select>
+
+    <!-- Scalar input box -->
+    <label for="scalar">Scalar:</label>
+    <input type="text" id="sca" name="sca" required
+      minlength="1" maxlength="8" size="10"></input>
+
+    <!-- Operation Draw Button -->
+    <br>
+    <input type="button" value="Draw"
+      onclick="handleDrawOperationEvent()"></input>
+
+
+  </body>
+
+</html>
