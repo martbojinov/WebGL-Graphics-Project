@@ -22,3 +22,5 @@ Assignment 5 - Messing around with three.js library to create a cool scene:
       https://people.ucsc.edu/~mbojinov/CSE%20160%20-%20Assignment5/asg5.html
 
 Update Note (Sept 7, 2022): Assignment 5 may not be displaying properly on the live website. Looking into the problem.
+
+Update Note (June 4, 2025): UC Santa Cruz is no longer hosing the pages in their system. They can be hosted locally to see how they work.
